@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Natalia García | Archivo Digital</title>
 
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+
 </head>
 
 <body>
@@ -13,46 +15,60 @@
 
     <aside class="sidebar">
 <div class="brand">
-  <span class="brand__symbol">◩</span>
+<img class="brand__logo" src="./assets/img/logo2.png" alt="NAABIT archivo digital" />
 
-  <div>
-    <p class="brand__title">NAABIT</p>
-    <p class="brand__subtitle">
-      archivo digital_
-    </p>
-  </div>
 </div>
+
       <nav class="nav">
         <a href="#">_ inicio</a>
         <a href="#">_ proyectos</a>
-        <a href="#">_ escritos</a>
-        <a href="#">_ laboratorio</a>
+        <a href="#">_ blog</a>
         <a href="#">_ contacto</a>
+
       </nav>
     </aside>
 
     <main class="main">
-      <section class="hero">
-        <p class="eyebrow"> DESARROLLO · QA · SOCIOLOGÍA</p>
+      <div class="main-grid">
+<section class="hero hero--archive">
+  <div class="hero__bg" aria-hidden="true"></div>
 
-        <h1>
-  Me interesa cómo la tecnología se relaciona con el entorno social. <br />
-  Busco desarrollar herramientas digitales funcionales, accesibles
-  y cercanas a la experiencia cotidiana de las personas.
-</h1>
+  <div class="hero__frame" aria-hidden="true">
+    <span class="hero__corner hero__corner--tl"></span>
+    <span class="hero__corner hero__corner--br"></span>
+  </div>
 
+  <div class="hero__content">
+    <p class="eyebrow">// INICIO <br>
+   // v.1</p>
+   
+    <p class="hero__text">
+      Me interesa cómo la tecnología se funde con el entorno social.
+      Busco desarrollar herramientas digitales funcionales
+      y cercanas a la experiencia cotidiana de las personas.
+    </p>
 
-        <a href="#" class="hero__link">> explorar archivo</a>
-      </section>
+    <a href="#" class="hero__link">&gt; explorar blog</a>
+  </div>
 
+  <div class="hero__meta">
+    <span>PUCÓN, CHILE</span>
+  </div>
+</section>
+    
       <section class="projects">
         <div class="section-header">
           <h2>// proyectos destacados</h2>
-          <a href="#">ver todos [+]</a>
+          <div class="section-header__actions">
+            <button class="carousel-btn" type="button" data-carousel-prev aria-label="Anterior">‹</button>
+            <button class="carousel-btn" type="button" data-carousel-next aria-label="Siguiente">›</button>
+            <a href="#">ver todos [+]</a>
+          </div>
         </div>
 
-        <div class="project-grid">
+        <div class="project-carousel" data-carousel>
           <article class="project-card">
+            <img class="project-card__img" src="https://picsum.photos/seed/treile/640/420" alt="Imagen de referencia del proyecto Treile Café" loading="lazy" />
             <p class="project-card__tag">WEB / IDENTIDAD</p>
             <h3>Treile Café</h3>
             <p>Plataforma digital para cafetería de especialidad en Pucón.</p>
@@ -60,6 +76,7 @@
           </article>
 
           <article class="project-card">
+            <img class="project-card__img" src="https://picsum.photos/seed/biblos/640/420" alt="Imagen de referencia del proyecto Biblos" loading="lazy" />
             <p class="project-card__tag">DATOS / ARCHIVO</p>
             <h3>Biblos</h3>
             <p>Explorador de artículos y referencias académicas.</p>
@@ -67,6 +84,7 @@
           </article>
 
           <article class="project-card">
+            <img class="project-card__img" src="https://picsum.photos/seed/qalab/640/420" alt="Imagen de referencia del proyecto QA Lab" loading="lazy" />
             <p class="project-card__tag">QA / TESTING</p>
             <h3>QA Lab</h3>
             <p>Bitácora de pruebas manuales, automatización y aprendizaje.</p>
@@ -75,6 +93,7 @@
         </div>
       </section>
 
+      </div>
     </main>
   </div>
 
