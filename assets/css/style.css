@@ -1,0 +1,283 @@
+:root {
+  --bg: #080b0b;
+  --panel: #101514;
+  --text: #d8d2bd;
+  --muted: #8d927f;
+  --accent: #d96b70;
+  --green: #8aa99a;
+  --line: rgba(216, 210, 189, 0.22);
+
+  --font-mono: "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(217, 107, 112, 0.12), transparent 30%),
+    radial-gradient(circle at 20% 80%, rgba(138, 169, 154, 0.08), transparent 35%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+
+  opacity: 0.18;
+
+  pointer-events: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand__code {
+  color: var(--accent);
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+.brand__subtitle {
+  color: var(--muted);
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 4rem;
+}
+
+.nav a {
+  color: var(--text);
+  font-size: 0.95rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--accent);
+  transform: translateX(6px);
+}
+
+/* MAIN */
+
+.main {
+  padding: 3rem;
+}
+
+.hero {
+  min-height: 55vh;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 850px;
+}
+.hero h1 {
+  text-shadow:
+    0 0 18px rgba(217, 107, 112, 0.08);
+}
+
+.hero__link::after {
+  content: "_";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  30% {
+    opacity: 0;
+  }
+}
+
+.eyebrow {
+  color: var(--green);
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5.8rem);
+  line-height: 0.95;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.hero__text {
+  max-width: 620px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.hero__link {
+  color: var(--accent);
+  width: fit-content;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 0.25rem;
+}
+
+/* PROJECTS */
+
+.projects {
+  padding-top: 2.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--green);
+}
+
+.section-header h2 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.section-header a {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.project-card {
+  border: 1px solid var(--line);
+  background: rgba(16, 21, 20, 0.72);
+  padding: 1.3rem;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+.project-card__tag {
+  color: var(--green);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.project-card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.project-card a {
+  color: var(--accent);
+  margin-top: 1.5rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .site-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav {
+    margin-top: 2rem;
+  }
+
+  .main {
+    padding: 2rem 1.2rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main {
+  position: relative;
+}
+
+.main::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    url("../img/bg-industrial.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.06;
+
+  mix-blend-mode: screen;
+
+  pointer-events: none;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand__symbol {
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+
+.brand__title {
+  letter-spacing: 0.35em;
+  font-size: 1rem;
+}
+
+.brand__subtitle {
+  color: var(--green);
+  font-size: 0.8rem;
+}
