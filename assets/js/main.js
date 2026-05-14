@@ -23,3 +23,52 @@
     nextBtn?.addEventListener("click", () => scrollByStep(1));
   });
 })();
+
+(() => {
+  const sidebar = document.querySelector(".sidebar");
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav");
+
+  if (!sidebar || !toggle || !nav) return;
+
+  const close = () => {
+    sidebar.classList.remove("sidebar--open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Abrir menú");
+  };
+
+  const open = () => {
+    sidebar.classList.add("sidebar--open");
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", "Cerrar menú");
+  };
+
+  const isOpen = () => sidebar.classList.contains("sidebar--open");
+
+  toggle.addEventListener("click", () => {
+    if (isOpen()) close();
+    else open();
+  });
+
+  nav.addEventListener("click", (event) => {
+    const target = event.target;
+    if (target instanceof HTMLAnchorElement) close();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") close();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!isOpen()) return;
+    const target = event.target;
+    if (!(target instanceof Node)) return;
+    if (sidebar.contains(target)) return;
+    close();
+  });
+
+  const mq = window.matchMedia("(max-width: 850px)");
+  mq.addEventListener?.("change", (event) => {
+    if (!event.matches) close();
+  });
+})();

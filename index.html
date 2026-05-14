@@ -14,12 +14,20 @@
   <div class="site-layout">
 
     <aside class="sidebar">
+      <div class="sidebar__top">
 <div class="brand">
 <img class="brand__logo" src="./assets/img/logo2.png" alt="NAABIT archivo digital" />
 
 </div>
 
-      <nav class="nav">
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-controls="site-nav" aria-expanded="false">
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <nav class="nav" id="site-nav">
         <a href="#">_ inicio</a>
         <a href="#">_ proyectos</a>
         <a href="#">_ blog</a>
