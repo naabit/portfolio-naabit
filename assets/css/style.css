@@ -268,11 +268,47 @@ a:focus-visible {
 .hero__link {
   color: var(--accent);
   width: fit-content;
-  border-bottom: 1px solid rgba(217, 107, 112, 0.7);
+  border-bottom: 1px solid transparent;
   padding-bottom: 0.25rem;
   font-size: 0.9rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero__link::after {
+  content: "_";
+  display: inline-block;
+  margin-left: 0.18em;
+  transform: translateY(0.03em);
+  animation: hero-cursor 1.05s steps(1, end) infinite;
+}
+
+.hero__link:hover {
+  border-color: rgba(217, 107, 112, 0.55);
+  transform: translateX(4px);
+}
+
+.hero__link:focus-visible {
+  border-color: rgba(217, 107, 112, 0.7);
+}
+
+@keyframes hero-cursor {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__link::after {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 .hero__meta {
@@ -329,22 +365,6 @@ a:focus-visible {
   .eyebrow {
     margin-top: 2.4rem;
   }
-}
-.hero__link::after {
-  content: "_";
-  animation: blink 1s infinite;
-}
-
-.hero__link {
-  color: var(--accent);
-  width: fit-content;
-  border-bottom: 1px solid var(--accent);
-  padding-bottom: 0.25rem;
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-.hero__link:hover {
-  border-color: rgba(217, 107, 112, 0.55);
-  transform: translateX(4px);
 }
 
 /* PROJECTS */
@@ -603,7 +623,7 @@ a:focus-visible {
 .site-footer__meta {
   margin: 0;
   color: rgba(216, 210, 189, 0.55);
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   letter-spacing: 0.08em;
   text-transform: lowercase;
   text-align: right;

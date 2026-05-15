@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos | Natalia García</title>
+
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="site-layout">
+      <div data-include="./partials/sidebar.html"></div>
+
+      <main class="main">
+        <section class="projects" aria-label="Proyectos">
+          <div class="section-header">
+            <h2>// proyectos</h2>
+          </div>
+
+          <div class="project-carousel" data-carousel>
+            <article class="project-card">
+              <img
+                class="project-card__img"
+                src="https://picsum.photos/seed/treile/640/420"
+                alt="Imagen de referencia del proyecto Treile Café"
+                loading="lazy"
+              />
+              <div class="project-card__body">
+                <p class="project-card__tag">WEB / IDENTIDAD</p>
+                <h3>Treile Café</h3>
+                <p>Plataforma digital para cafetería de especialidad en Pucón.</p>
+                <a href="#">ver caso →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                class="project-card__img"
+                src="https://picsum.photos/seed/biblos/640/420"
+                alt="Imagen de referencia del proyecto Biblos"
+                loading="lazy"
+              />
+              <div class="project-card__body">
+                <p class="project-card__tag">DATOS / ARCHIVO</p>
+                <h3>Biblos</h3>
+                <p>Explorador de artículos y referencias académicas.</p>
+                <a href="#">ver caso →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                class="project-card__img"
+                src="https://picsum.photos/seed/qalab/640/420"
+                alt="Imagen de referencia del proyecto QA Lab"
+                loading="lazy"
+              />
+              <div class="project-card__body">
+                <p class="project-card__tag">QA / TESTING</p>
+                <h3>QA Lab</h3>
+                <p>Bitácora de pruebas manuales, automatización y aprendizaje.</p>
+                <a href="#">ver caso →</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <div data-include="./partials/footer.html"></div>
+      </main>
+    </div>
+
+    <script src="./assets/js/includes.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
+
