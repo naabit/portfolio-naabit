@@ -154,6 +154,18 @@ a:focus-visible {
   filter: grayscale(0.7) contrast(1.25) brightness(0.7);
   transform: scale(1.02);
 }
+.page-projects .main::before {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(8, 11, 11, 0.92) 0%,
+      rgba(8, 11, 11, 0.72) 36%,
+      rgba(8, 11, 11, 0.38) 70%,
+      rgba(8, 11, 11, 0.82) 100%
+    ),
+    radial-gradient(circle at 72% 42%, rgba(217, 107, 112, 0.42), transparent 0 9%, transparent 18%),
+    url("../img/img2.png");
+}
 .main > * {
   position: relative;
   z-index: 1;
@@ -853,13 +865,25 @@ a:focus-visible {
   display: inline-grid;
   place-items: center;
   width: 44px;
-  height: auto;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  height: 44px;
+  border-radius: 999px;
+  overflow: hidden;
+  transition: transform 0.22s ease, opacity 0.22s ease, box-shadow 0.22s ease,
+    background-color 0.22s ease, filter 0.22s ease;
+  background-color: rgba(216, 210, 189, 0);
 }
 
 .site-footer__links a:hover {
-  transform: translateY(-1px);
-  opacity: 0.82;
+  transform: translateY(-2px) scale(1.06);
+  opacity: 0.92;
+  background-color: rgba(216, 210, 189, 0.08);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.26);
+  filter: saturate(1.1);
+}
+
+.site-footer__links a:focus-visible {
+  outline: 2px solid rgba(217, 107, 112, 0.75);
+  outline-offset: 3px;
 }
 
 .site-footer__links img {
@@ -867,6 +891,7 @@ a:focus-visible {
   height: auto;
   display: block;
   opacity: 0.92;
+  border-radius: inherit;
 }
 
 .site-footer__meta {
@@ -876,6 +901,16 @@ a:focus-visible {
   letter-spacing: 0.08em;
   text-transform: lowercase;
   text-align: right;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer__links a {
+    transition: none;
+  }
+
+  .site-footer__links a:hover {
+    transform: none;
+  }
 }
 
 /* RESPONSIVE */
