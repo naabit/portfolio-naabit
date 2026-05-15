@@ -1,9 +1,4 @@
-﻿reset{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+﻿
 
 :root {
   --bg: #080b0b;
@@ -130,9 +125,13 @@ a:focus-visible {
 /* MAIN */
 
 .main {
-  padding: 3rem;
+  padding: 2rem;
   position: relative;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  overflow: clip;
 }
 .main::before {
   content: "";
@@ -165,7 +164,9 @@ a:focus-visible {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: stretch;
-  margin-bottom: 50px;
+  flex: 1;
+  margin-bottom: 0;
+  padding-bottom: 5px;
 }
 
 .main-grid > * {
