@@ -14,111 +14,138 @@
       <div data-include="./partials/sidebar.html"></div>
 
       <main class="main">
-        <div class="main-grid">
-          <section class="hero hero--archive">
+          <section class="hero hero--archive" id="inicio">
             <div class="hero__bg" aria-hidden="true"></div>
 
-            <div class="hero__frame" aria-hidden="true">
-              <span class="hero__corner hero__corner--tl"></span>
-              <span class="hero__corner hero__corner--br"></span>
+            <div class="hero__panel">
+              <div class="hero__frame" aria-hidden="true">
+                <span class="hero__corner hero__corner--tl"></span>
+                <span class="hero__corner hero__corner--br"></span>
+              </div>
+
+              <div class="hero__content">
+                <p class="eyebrow">
+                  // HOLA! <br />
+                  // Soy Natalia!
+                </p>
+
+                <p class="hero__text">
+                  Me interesa cómo la tecnología se funde con el entorno social.
+                  Busco desarrollar herramientas digitales funcionales y cercanas
+                  a la experiencia cotidiana de las personas.
+                </p>
+
+                <a href="#proyectos" class="hero__link">&gt; Ver proyectos</a>
+              </div>
             </div>
 
-            <div class="hero__content">
-              <p class="eyebrow">
-                // HOLA! <br />
-                // Soy Natalia!
-              </p>
-
-              <p class="hero__text">
-                Me interesa cómo la tecnología se funde con el entorno social.
-                Busco desarrollar herramientas digitales funcionales y cercanas
-                a la experiencia cotidiana de las personas.
-              </p>
-
-              <a href="./blog.html" class="hero__link">&gt; Sobre mi</a>
-            </div>
 
             <div class="hero__meta">
               <span>PUCÓN, CHILE</span>
             </div>
           </section>
 
-          <section class="projects">
-            <div class="section-header">
-              <h2>// destacados</h2>
-              <div class="section-header__actions">
-                <button
-                  class="carousel-btn"
-                  type="button"
-                  data-carousel-prev
-                  aria-label="Anterior"
-                >
-                  ‹
-                </button>
-                <button
-                  class="carousel-btn"
-                  type="button"
-                  data-carousel-next
-                  aria-label="Siguiente"
-                >
-                  ›
-                </button>
-                <a href="./proyectos.html">ver todos [+]</a>
+        <section class="projects projects--page" id="proyectos" aria-label="Proyectos">
+          <div class="section-header">
+            <h2>// proyectos</h2>
+          </div>
+
+          <div class="projects-showcase">
+            <div class="card mb-3 project-card-wide">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./assets/img/biblos.png"
+                    class="img-fluid rounded-start"
+                    alt="Vista del proyecto Biblos"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <p class="card-kicker">PROYECTO #1 &mdash; Academic Dataset Explorer </p>
+                    <h5 class="card-title">BIBLOS</h5>
+                    <p class="card-text">
+                      Proyecto backend desarrollado con Django para importar, organizar y exportar artículos académicos.
+                      Incluye filtros dinámicos, ordenamiento, exportación segmentada y gestión modular de datasets.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-body-secondary">
+                        Python &#183; Django &#183; Pandas &#183; Bootstrap &#183; PostgreSQL
+                      </small>
+                    </p>
+                    <div class="project-card-actions" aria-label="Enlaces del proyecto Biblos">
+                      <a
+                        class="project-card-action"
+                        href="https://biblos-adql.onrender.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Ver demo
+                      </a>
+                      <a
+                        class="project-card-action"
+                        href="https://github.com/naabit/biblos"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Ver Repositorio
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="project-carousel" data-carousel>
-              <article class="project-card">
-                <img
-                  class="project-card__img"
-                  src="https://picsum.photos/seed/treile/640/420"
-                  alt="Imagen de referencia del proyecto Treile Café"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <p class="project-card__tag">WEB / IDENTIDAD</p>
-                  <h3>Treile Café</h3>
-                  <p>
-                    Plataforma digital para cafetería de especialidad en Pucón.
-                  </p>
-                  <a href="#">ver caso →</a>
+            <div class="card mb-3 project-card-wide">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./assets/img/img2.png"
+                    class="img-fluid rounded-start"
+                    alt="Vista del proyecto Biblos"
+                    loading="lazy"
+                  />
                 </div>
-              </article>
-
-              <article class="project-card">
-                <img
-                  class="project-card__img"
-                  src="https://picsum.photos/seed/biblos/640/420"
-                  alt="Imagen de referencia del proyecto Biblos"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <p class="project-card__tag">DATOS / ARCHIVO</p>
-                  <h3>Biblos</h3>
-                  <p>Explorador de artículos y referencias académicas.</p>
-                  <a href="#">ver caso →</a>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <p class="card-kicker">PROYECTO #2 &mdash; BIBLOS</p>
+                    <h5 class="card-title">DATOS / ARCHIVO</h5>
+                    <p class="card-text">
+                      Explorador de art&#237;culos y referencias acad&#233;micas. Enfoque en
+                      estructura de contenidos, b&#250;squeda y taxonom&#237;as para navegar
+                      colecciones en formato archivo, manteniendo una est&#233;tica
+                      editorial y clara.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-body-secondary">
+                        HTML, CSS, Accesibilidad, Arquitectura de informaci&#243;n
+                      </small>
+                    </p>
+                  </div>
                 </div>
-              </article>
-
-              <article class="project-card">
-                <img
-                  class="project-card__img"
-                  src="https://picsum.photos/seed/qalab/640/420"
-                  alt="Imagen de referencia del proyecto QA Lab"
-                  loading="lazy"
-                />
-                <div class="project-card__body">
-                  <p class="project-card__tag">QA / TESTING</p>
-                  <h3>QA Lab</h3>
-                  <p>
-                    Bitácora de pruebas manuales, automatización y aprendizaje.
-                  </p>
-                  <a href="#">ver caso →</a>
-                </div>
-              </article>
+              </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
+
+        <section class="hero hero--archive" id="contacto" aria-label="Contacto">
+          <div class="hero__frame" aria-hidden="true">
+            <span class="hero__corner hero__corner--tl"></span>
+            <span class="hero__corner hero__corner--br"></span>
+          </div>
+
+          <div class="hero__content">
+            <p class="eyebrow">// CONTACTO</p>
+            <p class="hero__text">
+              ¿Tienes un proyecto o idea? Escríbeme y lo conversamos.
+            </p>
+
+            <p class="hero__text">
+              <a class="hero__link" href="mailto:hola@naabit.cl">hola@naabit.cl</a>
+            </p>
+          </div>
+        </section>
 
         <div data-include="./partials/footer.html"></div>
       </main>

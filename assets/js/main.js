@@ -10,9 +10,9 @@
       const nextBtn = section.querySelector("[data-carousel-next]");
 
       const getStep = () => {
-        const firstCard = carousel.querySelector(".project-card");
-        if (!firstCard) return 0;
-        const cardRect = firstCard.getBoundingClientRect();
+        const firstSlide = carousel.firstElementChild;
+        if (!(firstSlide instanceof HTMLElement)) return 0;
+        const cardRect = firstSlide.getBoundingClientRect();
         return Math.max(1, Math.round(cardRect.width));
       };
 
@@ -26,8 +26,15 @@
         const nextLeft = carousel.scrollLeft + delta;
         const edgeEpsilon = 2;
 
-        if (direction > 0 && nextLeft >= maxScrollLeft - edgeEpsilon) return;
-        if (direction < 0 && nextLeft <= edgeEpsilon) return;
+        if (direction > 0 && nextLeft >= maxScrollLeft - edgeEpsilon) {
+          carousel.scrollTo({ left: 0, behavior: "smooth" });
+          return;
+        }
+
+        if (direction < 0 && nextLeft <= edgeEpsilon) {
+          carousel.scrollTo({ left: maxScrollLeft, behavior: "smooth" });
+          return;
+        }
 
         carousel.scrollBy({ left: delta, behavior: "smooth" });
       };
@@ -128,4 +135,3 @@
 
   document.addEventListener("site:includes:loaded", initAll);
 })();
-
