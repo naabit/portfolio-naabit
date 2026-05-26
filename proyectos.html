@@ -3,100 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyectos | Natalia Gar&#237;a</title>
+    <meta
+      name="description"
+      content="Archivo de proyectos de Natalia García Cofré: desarrollo web, backend, QA y exploración de datos."
+    />
+    <title>Proyectos | Natalia García</title>
 
     <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
-  <body class="page-projects">
+  <body>
     <div class="site-layout">
       <div data-include="./partials/sidebar.html"></div>
 
-      <main class="main">
-        <section class="projects projects--page" aria-label="Proyectos">
-          <div class="section-header">
-            <h2>// proyectos</h2>
-          </div>
+      <main class="main main--archive">
+        <header class="page-header">
+          <h1 class="eyebrow">// ARCHIVO DE PROYECTOS</h1>
+          <h1></h1>
+          <p>
+            Este espacio reúne proyectos construidos para practicar desarrollo,
+            backend, QA y diseño de información desde una mirada funcional y
+            social.
+          </p>
+        </header>
 
-          <div class="projects-showcase">
-            <div class="card mb-3 project-card-wide">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="./assets/img/biblos.png"
-                    class="img-fluid rounded-start"
-                    alt="Vista del proyecto Biblos"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <p class="card-kicker">PROYECTO #1 &mdash; Academic Dataset Explorer </p>
-                    <h5 class="card-title">BIBLOS</h5>
-                    <p class="card-text">
-                      Proyecto backend desarrollado con Django para importar, organizar y exportar artículos académicos.
-Incluye filtros dinámicos, ordenamiento, exportación segmentada y gestión modular de datasets.
-                    </p>
-                    <p class="card-text">
-                      <small class="text-body-secondary">
-                        Python · Django · Pandas · Bootstrap · PostgreSQL
-                      </small>
-                    </p>
-                    <div class="project-card-actions" aria-label="Enlaces del proyecto Biblos">
-                      <a
-                        class="project-card-action"
-                        href="https://biblos-adql.onrender.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Ver demo
-                      </a>
-                      <a
-                        class="project-card-action"
-                        href="https://github.com/naabit/biblos"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Ver Repositorio
-                      </a>
-                    </div>
-                  </div>
-                </div>
+        <section class="section projects-list" aria-label="Lista de proyectos">
+          <article class="project-card">
+            <figure class="project-card__media">
+              <img
+                src="./assets/img/biblos.png"
+                alt="Vista del proyecto Purple Store"
+                loading="lazy"
+              />
+            </figure>
+
+            <div class="project-card__body">
+              <p class="project-card__kicker">
+                Proyecto #1 · Academic Dataset Explorer
+              </p>
+              <h2>BIBLOS</h2>
+              <p>
+                Proyecto backend desarrollado con Django para importar,
+                organizar y exportar artículos académicos. Incluye filtros
+                dinámicos, ordenamiento, exportación segmentada y gestión
+                modular de datasets.
+              </p>
+
+              <ul class="tag-list" aria-label="Tecnologías utilizadas">
+                <li>Python</li>
+                <li>Django</li>
+                <li>Pandas</li>
+                <li>Bootstrap</li>
+                <li>PostgreSQL</li>
+              </ul>
+
+              <div class="project-card__actions">
+                <a
+                  class="button button--primary"
+                  href="https://biblos-adql.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver demo</a
+                >
+                <a
+                  class="button button--ghost"
+                  href="https://github.com/naabit/biblos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Repositorio</a
+                >
               </div>
             </div>
+          </article>
+          <article class="project-card">
+            <figure class="project-card__media">
+              <img
+                src="./assets/img/purple-store.png"
+                alt="Vista del proyecto Purple Store"
+                loading="lazy"
+              />
+            </figure>
 
-            <div class="card mb-3 project-card-wide">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="./assets/img/img2.png"
-                    class="img-fluid rounded-start"
-                    alt="Vista del proyecto Biblos"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <p class="card-kicker">PROYECTO #2 &mdash; BIBLOS</p>
-                    <h5 class="card-title">DATOS / ARCHIVO</h5>
-                    <p class="card-text">
-                      Explorador de art&#237;culos y referencias acad&#233;micas. Enfoque en
-                      estructura de contenidos, b&#250;squeda y taxonom&#237;as para navegar
-                      colecciones en formato archivo, manteniendo una est&#233;tica
-                      editorial y clara.
-                    </p>
-                    <p class="card-text">
-                      <small class="text-body-secondary">
-                        HTML, CSS, Accesibilidad, Arquitectura de informaci&#243;n
-                      </small>
-                    </p>
-                  </div>
-                </div>
+            <div class="project-card__body">
+              <p class="project-card__kicker">
+                Proyecto #2 · Ecommerce · Backend · Bootcamp
+              </p>
+              <h2>Purple Store</h2>
+              <p>
+      Ecommerce desarrollado con Django y PostgreSQL. Incluye catálogo,
+      carrito de compras, autenticación de usuarios, checkout y manejo
+      de permisos, integrando lógica de backend con una interfaz sencilla
+      y funcional.
+              </p>
+
+              <ul class="tag-list" aria-label="Tecnologías utilizadas">
+                <li>Django</li>
+                <li>PostgreSQL</li>
+                <li>Bootstrap</li>
+                <li>Render</li>
+              </ul>
+
+              <div class="project-card__actions">
+                <a
+                  class="button button--primary"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver demo</a
+                >
+                <a
+                  class="button button--ghost"
+                  href="https://github.com/naabit/ecommerce_portafolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Repositorio</a
+                >
               </div>
             </div>
-
-          </div>
+          </article>
         </section>
 
         <div data-include="./partials/footer.html"></div>

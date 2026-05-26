@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Natalia García | Archivo Digital</title>
+    <meta
+      name="description"
+      content="Portafolio de Natalia García Cofré: desarrollo web, QA y herramientas digitales con enfoque social."
+    />
+    <title>Natalia García | Naabit</title>
 
     <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -14,137 +18,102 @@
       <div data-include="./partials/sidebar.html"></div>
 
       <main class="main">
-          <section class="hero hero--archive" id="inicio">
-            <div class="hero__bg" aria-hidden="true"></div>
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+          <div class="hero__panel frame-panel">
+            
 
-            <div class="hero__panel">
-              <div class="hero__frame" aria-hidden="true">
-                <span class="hero__corner hero__corner--tl"></span>
-                <span class="hero__corner hero__corner--br"></span>
-              </div>
+            <h1 id="hero-title">Hola soy Natalia!!</h1>
+            <p class="eyebrow">// Tecnología cercana para problemas reales.</p>
+            <p class="hero__text">
+              Me interesa cómo la tecnología se relaciona con el entorno social.
+              Busco desarrollar herramientas digitales funcionales, accesibles y
+              cercanas a la experiencia cotidiana de las personas.
+            </p>
 
-              <div class="hero__content">
-                <p class="eyebrow">
-                  // HOLA! <br />
-                  // Soy Natalia!
-                </p>
-
-                <p class="hero__text">
-                  Me interesa cómo la tecnología se funde con el entorno social.
-                  Busco desarrollar herramientas digitales funcionales y cercanas
-                  a la experiencia cotidiana de las personas.
-                </p>
-
-                <a href="#proyectos" class="hero__link">&gt; Ver proyectos</a>
-              </div>
+            <div class="hero__actions" aria-label="Acciones principales">
+              <a class="button button--primary" href="./proyectos.html">Ver proyectos</a>
+              <a class="button button--ghost" href="./contacto.html">Contacto</a>
             </div>
-
-
-            <div class="hero__meta">
-              <span>PUCÓN, CHILE</span>
-            </div>
-          </section>
-
-        <section class="projects projects--page" id="proyectos" aria-label="Proyectos">
-          <div class="section-header">
-            <h2>// proyectos</h2>
           </div>
 
-          <div class="projects-showcase">
-            <div class="card mb-3 project-card-wide">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="./assets/img/biblos.png"
-                    class="img-fluid rounded-start"
-                    alt="Vista del proyecto Biblos"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <p class="card-kicker">PROYECTO #1 &mdash; Academic Dataset Explorer </p>
-                    <h5 class="card-title">BIBLOS</h5>
-                    <p class="card-text">
-                      Proyecto backend desarrollado con Django para importar, organizar y exportar artículos académicos.
-                      Incluye filtros dinámicos, ordenamiento, exportación segmentada y gestión modular de datasets.
-                    </p>
-                    <p class="card-text">
-                      <small class="text-body-secondary">
-                        Python &#183; Django &#183; Pandas &#183; Bootstrap &#183; PostgreSQL
-                      </small>
-                    </p>
-                    <div class="project-card-actions" aria-label="Enlaces del proyecto Biblos">
-                      <a
-                        class="project-card-action"
-                        href="https://biblos-adql.onrender.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Ver demo
-                      </a>
-                      <a
-                        class="project-card-action"
-                        href="https://github.com/naabit/biblos"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Ver Repositorio
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <p class="hero__meta">PUCÓN, CHILE · DESARROLLO WEB · QA · ARCHIVO DIGITAL</p>
+        </section>
 
-            <div class="card mb-3 project-card-wide">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="./assets/img/img2.png"
-                    class="img-fluid rounded-start"
-                    alt="Vista del proyecto Biblos"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <p class="card-kicker">PROYECTO #2 &mdash; BIBLOS</p>
-                    <h5 class="card-title">DATOS / ARCHIVO</h5>
-                    <p class="card-text">
-                      Explorador de art&#237;culos y referencias acad&#233;micas. Enfoque en
-                      estructura de contenidos, b&#250;squeda y taxonom&#237;as para navegar
-                      colecciones en formato archivo, manteniendo una est&#233;tica
-                      editorial y clara.
-                    </p>
-                    <p class="card-text">
-                      <small class="text-body-secondary">
-                        HTML, CSS, Accesibilidad, Arquitectura de informaci&#243;n
-                      </small>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <section class="section intro" aria-labelledby="intro-title">
+          <div class="section-header">
+            <p class="eyebrow">// ENFOQUE</p>
+            <h2 id="intro-title">Construyo interfaces con estructura, criterio y memoria.</h2>
+          </div>
+
+          <div class="intro__grid">
+            <article class="info-card">
+              <h3>Desarrollo</h3>
+              <p>
+                Trabajo con HTML, CSS, JavaScript, Python y Django para crear
+                proyectos claros, mantenibles y preparados para crecer.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>QA</h3>
+              <p>
+                Me interesa probar software desde la mirada de las personas:
+                flujos reales, errores visibles, accesibilidad y documentación útil.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>Sociología</h3>
+              <p>
+                Mi formación social me ayuda a pensar productos digitales desde
+                su contexto: quién los usa, para qué y bajo qué condiciones.
+              </p>
+            </article>
           </div>
         </section>
 
-        <section class="hero hero--archive" id="contacto" aria-label="Contacto">
-          <div class="hero__frame" aria-hidden="true">
-            <span class="hero__corner hero__corner--tl"></span>
-            <span class="hero__corner hero__corner--br"></span>
+        <section class="section projects-preview" aria-labelledby="projects-title">
+          <div class="section-header section-header--inline">
+            <div>
+              <p class="eyebrow">// PROYECTOS</p>
+              <h2 id="projects-title">Trabajos recientes</h2>
+            </div>
+            <a class="text-link" href="./proyectos.html">Ver archivo completo</a>
           </div>
 
-          <div class="hero__content">
-            <p class="eyebrow">// CONTACTO</p>
-            <p class="hero__text">
-              ¿Tienes un proyecto o idea? Escríbeme y lo conversamos.
-            </p>
+          <article class="project-card project-card--featured">
+            <figure class="project-card__media">
+              <img
+                src="./assets/img/biblos.png"
+                alt="Vista del proyecto Biblos"
+                loading="lazy"
+              />
+            </figure>
 
-            <p class="hero__text">
-              <a class="hero__link" href="mailto:hola@naabit.cl">hola@naabit.cl</a>
-            </p>
-          </div>
+            <div class="project-card__body">
+              <p class="project-card__kicker">Proyecto #1 · Academic Dataset Explorer</p>
+              <h3>BIBLOS</h3>
+              <p>
+                Aplicación backend desarrollada con Django para importar,
+                organizar, filtrar y exportar artículos académicos. Integra
+                limpieza de datos, gestión modular de datasets y una interfaz
+                pensada para navegar información bibliográfica.
+              </p>
+
+              <ul class="tag-list" aria-label="Tecnologías utilizadas">
+                <li>Python</li>
+                <li>Django</li>
+                <li>Pandas</li>
+                <li>Bootstrap</li>
+                <li>PostgreSQL</li>
+              </ul>
+
+              <div class="project-card__actions" aria-label="Enlaces de Biblos">
+                <a class="button button--primary" href="https://biblos-adql.onrender.com/" target="_blank" rel="noopener noreferrer">Ver demo</a>
+                <a class="button button--ghost" href="https://github.com/naabit/biblos" target="_blank" rel="noopener noreferrer">Repositorio</a>
+              </div>
+            </div>
+          </article>
         </section>
 
         <div data-include="./partials/footer.html"></div>
