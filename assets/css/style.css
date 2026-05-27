@@ -56,7 +56,7 @@ body::after {
   background-image:
     linear-gradient(90deg, rgba(8, 11, 11, 0.96), rgba(8, 11, 11, 0.62), rgba(8, 11, 11, 0.9)),
     radial-gradient(circle at 72% 42%, rgba(217, 107, 112, 0.35), transparent 0 10%, transparent 20%),
-    url("../img/hero-bg.png");
+    url("../img/bg/hero-bg.png");
   background-size: cover;
   background-position: center;
   filter: grayscale(0.7) contrast(1.22) brightness(0.68);
