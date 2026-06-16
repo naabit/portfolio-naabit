@@ -40,7 +40,7 @@ html[data-theme="light"] {
   --color-primary-soft: rgba(217, 107, 112, 0.16);
   --color-border: rgba(88, 66, 54, 0.16);
   --color-border-strong: rgba(88, 66, 54, 0.28);
-  --color-sidebar: rgba(247, 235, 214, 0.78);
+  --color-sidebar: rgba(75, 70, 62, 0.78);
   --color-sidebar-mobile: rgba(255, 248, 236, 0.94);
   --color-overlay-main: rgba(246, 239, 227, 0.92);
   --color-overlay-mid: rgba(246, 239, 227, 0.72);
