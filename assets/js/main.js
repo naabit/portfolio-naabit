@@ -55,6 +55,7 @@
     const sidebar = document.querySelector(".sidebar");
     const toggle = document.querySelector(".nav-toggle");
     const nav = document.querySelector(".nav");
+    const mobileQuery = window.matchMedia("(max-width: 850px)");
 
     if (!sidebar || !toggle || !nav) return;
     if (sidebar.dataset.ready === "true") return;
@@ -84,6 +85,16 @@
       if (!sidebar.classList.contains("sidebar--open")) return;
       if (!sidebar.contains(target)) setOpen(false);
     });
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!mobileQuery.matches) return;
+        if (!sidebar.classList.contains("sidebar--open")) return;
+        setOpen(false);
+      },
+      { passive: true }
+    );
 
     window.matchMedia("(min-width: 851px)").addEventListener("change", () => {
       setOpen(false);
