@@ -19,9 +19,6 @@
 
   const applyTheme = (theme) => {
     root.dataset.theme = theme;
-    if (document.body) {
-      document.body.dataset.theme = theme;
-    }
 
     const toggle = document.querySelector(".theme-toggle");
     if (!toggle) return;
@@ -36,8 +33,6 @@
     const toggle = document.querySelector(".theme-toggle");
     if (!toggle || toggle.dataset.ready === "true") return;
     toggle.dataset.ready = "true";
-
-    applyTheme(getPreferredTheme());
 
     toggle.addEventListener("click", () => {
       const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
