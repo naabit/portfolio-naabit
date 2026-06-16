@@ -28,6 +28,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 1.25rem;
+}
+
 body {
   min-height: 100vh;
   overflow-x: hidden;
@@ -409,6 +413,12 @@ h3 {
   gap: 1rem;
 }
 
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .info-card {
   min-height: 100%;
   padding: 1.25rem;
@@ -491,6 +501,10 @@ h3 {
   border-radius: var(--radius);
 }
 
+.cv-section .hero__actions {
+  margin-top: 1rem;
+}
+
 .main--contact {
   justify-content: space-between;
 }
@@ -558,6 +572,10 @@ h3 {
 
 @media (max-width: 960px) {
   .intro__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-grid {
     grid-template-columns: 1fr;
   }
 
