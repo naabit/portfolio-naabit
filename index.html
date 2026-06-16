@@ -10,6 +10,23 @@
     />
     <title>Natalia García | Naabit</title>
 
+    <script>
+      (() => {
+        try {
+          const storedTheme = localStorage.getItem("naabit-theme");
+          const theme =
+            storedTheme === "light" || storedTheme === "dark"
+              ? storedTheme
+              : window.matchMedia("(prefers-color-scheme: light)").matches
+                ? "light"
+                : "dark";
+          document.documentElement.dataset.theme = theme;
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+
     <link rel="icon" type="image/png" href="./assets/img/favicon/favicon.png" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>

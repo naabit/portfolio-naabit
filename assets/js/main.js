@@ -1,4 +1,56 @@
 (() => {
+  const THEME_STORAGE_KEY = "naabit-theme";
+  const root = document.documentElement;
+
+  const getStoredTheme = () => {
+    try {
+      const theme = window.localStorage.getItem(THEME_STORAGE_KEY);
+      return theme === "light" || theme === "dark" ? theme : null;
+    } catch {
+      return null;
+    }
+  };
+
+  const getPreferredTheme = () => {
+    const storedTheme = getStoredTheme();
+    if (storedTheme) return storedTheme;
+    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  };
+
+  const applyTheme = (theme) => {
+    root.dataset.theme = theme;
+    if (document.body) {
+      document.body.dataset.theme = theme;
+    }
+
+    const toggle = document.querySelector(".theme-toggle");
+    if (!toggle) return;
+
+    const nextThemeLabel = theme === "light" ? "oscuro" : "claro";
+    toggle.setAttribute("aria-label", `Activar tema ${nextThemeLabel}`);
+    toggle.setAttribute("aria-pressed", String(theme === "light"));
+    toggle.setAttribute("title", `Cambiar a tema ${nextThemeLabel}`);
+  };
+
+  const initThemeToggle = () => {
+    const toggle = document.querySelector(".theme-toggle");
+    if (!toggle || toggle.dataset.ready === "true") return;
+    toggle.dataset.ready = "true";
+
+    applyTheme(getPreferredTheme());
+
+    toggle.addEventListener("click", () => {
+      const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
+      applyTheme(nextTheme);
+
+      try {
+        window.localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+      } catch {
+        // Ignore storage failures and keep the in-memory theme.
+      }
+    });
+  };
+
   const initSidebar = () => {
     const sidebar = document.querySelector(".sidebar");
     const toggle = document.querySelector(".nav-toggle");
@@ -11,7 +63,7 @@
     const setOpen = (isOpen) => {
       sidebar.classList.toggle("sidebar--open", isOpen);
       toggle.setAttribute("aria-expanded", String(isOpen));
-      toggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+      toggle.setAttribute("aria-label", isOpen ? "Cerrar menu" : "Abrir menu");
     };
 
     toggle.addEventListener("click", () => {
@@ -38,7 +90,16 @@
     });
   };
 
-  const init = () => initSidebar();
+  const init = () => {
+    applyTheme(getPreferredTheme());
+    initSidebar();
+    initThemeToggle();
+  };
+
+  window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", () => {
+    if (getStoredTheme()) return;
+    applyTheme(getPreferredTheme());
+  });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init, { once: true });
