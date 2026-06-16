@@ -1,6 +1,9 @@
 (() => {
   const THEME_STORAGE_KEY = "naabit-theme";
   const root = document.documentElement;
+  const loader = document.querySelector(".page-loader");
+  let includesReady = !document.querySelector("[data-include]");
+  let pageReady = document.readyState === "complete";
 
   const getStoredTheme = () => {
     try {
@@ -133,9 +136,20 @@
     initCopyEmail();
   };
 
+  const hideLoader = () => {
+    if (!loader || !includesReady || !pageReady) return;
+    loader.classList.add("is-hidden");
+    document.body?.classList.remove("is-loading");
+  };
+
   window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", () => {
     if (getStoredTheme()) return;
     applyTheme(getPreferredTheme());
+  });
+
+  window.addEventListener("load", () => {
+    pageReady = true;
+    hideLoader();
   });
 
   if (document.readyState === "loading") {
@@ -144,5 +158,11 @@
     init();
   }
 
-  document.addEventListener("site:includes:loaded", init);
+  document.addEventListener("site:includes:loaded", () => {
+    includesReady = true;
+    init();
+    hideLoader();
+  });
+
+  hideLoader();
 })();

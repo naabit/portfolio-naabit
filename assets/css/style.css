@@ -75,6 +75,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.is-loading {
+  overflow: hidden;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -122,6 +126,33 @@ button:focus-visible {
 
 button {
   font: inherit;
+}
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background:
+    linear-gradient(135deg, var(--color-overlay-main), var(--color-overlay-end)),
+    var(--color-bg);
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.page-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.page-loader__label {
+  color: var(--color-text);
+  font-size: clamp(1.15rem, 2.5vw, 1.8rem);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .site-layout {
