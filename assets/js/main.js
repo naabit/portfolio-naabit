@@ -90,10 +90,41 @@
     });
   };
 
+  const initCopyEmail = () => {
+    const buttons = document.querySelectorAll("[data-copy-email]");
+
+    buttons.forEach((button) => {
+      if (!(button instanceof HTMLButtonElement) || button.dataset.ready === "true") return;
+      button.dataset.ready = "true";
+
+      let resetTimer;
+
+      button.addEventListener("click", async () => {
+        const email = button.dataset.copyEmail;
+        if (!email) return;
+
+        try {
+          await navigator.clipboard.writeText(email);
+          button.classList.add("is-copied");
+          button.setAttribute("aria-label", `Correo ${email} copiado`);
+        } catch {
+          button.setAttribute("aria-label", `No se pudo copiar el correo ${email}`);
+        }
+
+        window.clearTimeout(resetTimer);
+        resetTimer = window.setTimeout(() => {
+          button.classList.remove("is-copied");
+          button.setAttribute("aria-label", `Copiar correo ${email}`);
+        }, 1800);
+      });
+    });
+  };
+
   const init = () => {
     applyTheme(getPreferredTheme());
     initSidebar();
     initThemeToggle();
+    initCopyEmail();
   };
 
   window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", () => {

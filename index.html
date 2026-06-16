@@ -55,7 +55,11 @@
           <p class="hero__meta">PUCÓN, CHILE · DESARROLLO WEB · QA · ARCHIVO DIGITAL</p>
         </section>
 
-        <section class="section projects-list" id="proyectos" aria-labelledby="projects-title">
+        <section
+          class="section projects-list"
+          id="proyectos"
+          aria-labelledby="projects-title"
+        >
           <div class="section-header section-header--inline">
             <div>
               <p class="eyebrow">// PROYECTOS</p>
@@ -302,7 +306,9 @@
         <section class="section intro" id="enfoque" aria-labelledby="intro-title">
           <div class="section-header">
             <p class="eyebrow">// ENFOQUE</p>
-            <h2 id="intro-title">Construir y comprender aquello que hay detrás de la tecnología.</h2>
+            <h2 id="intro-title">
+              Construir y comprender aquello que hay detrás de la tecnología.
+            </h2>
           </div>
 
           <div class="intro__grid">
@@ -334,7 +340,11 @@
           </div>
         </section>
 
-        <section class="section projects-preview" id="investigacion" aria-labelledby="research-title">
+        <section
+          class="section projects-preview"
+          id="investigacion"
+          aria-labelledby="research-title"
+        >
           <div class="section-header section-header--inline">
             <div>
               <p class="eyebrow">// INVESTIGACIÓN</p>
@@ -404,33 +414,119 @@
         </section>
 
         <section class="section cv-section" id="cv" aria-labelledby="cv-title">
-          <div class="section-header">
-            <p class="eyebrow">// CV</p>
-            <h2 id="cv-title">CV provisorio</h2>
-          </div>
-
-          <div class="cv-grid">
-            <article class="info-card">
-              <h3>Perfil</h3>
-              <p>
-                Desarrollo web, QA e investigación social aplicados a productos
-                digitales claros, funcionales y mantenibles.
-              </p>
-            </article>
-
-            <article class="info-card">
-              <h3>Experiencia y formación</h3>
-              <p>
-                Esta sección queda como placeholder mientras se prepara una versión
-                descargable y más detallada del CV, con experiencia, estudios y stack.
-              </p>
-            </article>
-          </div>
-
-          <div class="hero__actions" aria-label="Acciones del CV">
-            <a class="button button--ghost" href="mailto:hola@naabit.cl?subject=Solicitud%20de%20CV">
-              Solicitar CV completo
+          <div class="section-header section-header--inline">
+            <div>
+              <p class="eyebrow">// CV</p>
+              <h2 id="cv-title">Natalia García Cofré</h2>
+            </div>
+            <a
+              class="cv-download"
+              href="assets/docs/Curriculum-Natalia-Garcia.pdf"
+              download="Curriculum-Natalia-Garcia.pdf"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="cv-download__icon"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m.75 12 3 3m0 0 3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+                />
+              </svg>
+              <span>Descargar CV completo</span>
             </a>
+          </div>
+
+          <div class="cv-layout">
+            <article class="cv-profile frame-panel">
+              <figure class="cv-profile__media">
+                <img
+                  src="./assets/img/profile/perfil.png"
+                  alt="Retrato de Natalia Garcia"
+                  loading="lazy"
+                />
+              </figure>
+
+              <div class="cv-profile__body">
+                <p class="project-card__kicker">Resumen</p>
+               
+                <p class="cv-copy">
+                  Profesional en transición hacia el área tecnológica, con formación en
+                  desarrollo Full Stack Python/Django y especialización en testing
+                  funcional y automatización de pruebas.
+                </p>
+                <p class="cv-copy">
+                  Me interesa construir y evaluar software desde flujos reales de uso,
+                  considerando errores, validaciones, accesibilidad y experiencia de
+                  usuario. Mi formación previa en sociología aporta una mirada analítica
+                  sobre las personas, los contextos de uso y la calidad de los productos
+                  digitales.
+                </p>
+
+                <ul class="tag-list cv-stack" aria-label="Stack y áreas de trabajo">
+                  <li>Python</li>
+                  <li>Django</li>
+                  <li>PostgreSQL</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Bootstrap</li>
+                  <li>Git/GitHub</li>
+                  <li>Testing funcional</li>
+                  <li>Automatización básica</li>
+                  <li>React</li>
+                  <li>TypeScript básico</li>
+                </ul>
+              </div>
+            </article>
+
+            <div class="cv-grid">
+              <article class="info-card cv-card">
+                <p class="eyebrow">Formación</p>
+                <ul class="cv-list">
+                  <li>
+                    <strong>Desarrollo de Aplicaciones Full Stack Python</strong>
+                    <span>Talento Digital para Chile · Certificación en proceso · 2026</span>
+                  </li>
+                  <li>
+                    <strong>Formación en Sociología</strong>
+                    <span>Universidad de La Frontera · 2016-2019</span>
+                  </li>
+                  <li>
+                    <strong>Test Automation Engineer</strong>
+                    <span>Desafío Latam · 400 horas · 2026</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="info-card cv-card">
+                <p class="eyebrow">Certificaciones</p>
+                <ul class="cv-list">
+                  <li>
+                    <strong>Transformación Digital con IA y Automatización</strong>
+                    <span>Desafío Latam · 150 horas · 2026</span>
+                  </li>
+                  <li>
+                    <strong>Fundamentos de Test Automation Engineer</strong>
+                    <span>Nodo / Desafío Latam · 58 horas · 2026</span>
+                  </li>
+                  <li>
+                    <strong>NDG Linux Unhatched</strong>
+                    <span>Cisco Networking Academy</span>
+                  </li>
+                  <li>
+                    <strong>Gestión de Proyectos con Metodologías Ágiles</strong>
+                    <span>SENCE · Movistar / Fundación Telefónica</span>
+                  </li>
+                </ul>
+              </article>
+            </div>
           </div>
         </section>
 
@@ -444,7 +540,47 @@
             </p>
 
             <div class="contact-options" aria-label="Opciones de contacto">
-              <a class="contact-link" href="mailto:hola@naabit.cl">hola@naabit.cl</a>
+              <div class="contact-email-group">
+                <button
+                  class="contact-copy"
+                  type="button"
+                  data-copy-email="hola@naabit.cl"
+                  aria-label="Copiar correo hola@naabit.cl"
+                  title="Copiar correo"
+                >
+                  <span class="contact-copy__text">hola@naabit.cl</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="contact-copy__icon contact-copy__icon--copy"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="contact-copy__icon contact-copy__icon--success"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75"
+                    />
+                  </svg>
+                </button>
+              </div>
               <a
                 class="contact-link"
                 href="https://github.com/naabit"
