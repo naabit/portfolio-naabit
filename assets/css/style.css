@@ -401,6 +401,16 @@ h3 {
   display: block;
 }
 
+.button__icon--inline {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+}
+
+.button {
+  gap: 0.55rem;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
