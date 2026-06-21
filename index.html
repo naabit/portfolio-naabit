@@ -17,9 +17,7 @@
           const theme =
             storedTheme === "light" || storedTheme === "dark"
               ? storedTheme
-              : window.matchMedia("(prefers-color-scheme: light)").matches
-                ? "light"
-                : "dark";
+              : "dark";
           document.documentElement.dataset.theme = theme;
         } catch {
           document.documentElement.dataset.theme = "dark";
