@@ -329,6 +329,12 @@ h3 {
   margin-top: 1.4rem;
 }
 
+.project-card__note {
+  margin-top: 0.75rem;
+  font-size: 0.70em;
+  color: var(--color-text-soft);
+}
+
 .button,
 .contact-link,
 .text-link {
